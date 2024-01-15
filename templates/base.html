@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Flask</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li> <!-- Each link connects to the app.route in run.py -->
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('careers') }}">Careers</a></li>
+        </ul>
+    </nav>
+
+    <!-- this block takes from whichever page is being rendered: index, about, or contact -->
+    {% block content %}
+    {% endblock %}
+    <!-- The base.html template is inherited by all other pages - changing something here will change it all over the site! -->
+
+</body>
+
+</html>
