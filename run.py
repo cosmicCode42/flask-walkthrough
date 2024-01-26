@@ -51,4 +51,4 @@ if __name__ == "__main__":
     app.run(
         host = os.environ.get("IP", "0.0.0.0"),
         port = int(os.environ.get("PORT", "5000")),
-        debug = True) # should not be set to true in production
+        debug = False) # should not be set to true in production
